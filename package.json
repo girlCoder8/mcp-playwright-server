@@ -1,0 +1,40 @@
+{
+  "name": "mcp-playwright-server",
+  "version": "1.0.0",
+  "description": "Automation framework with Playwright, Appium, Headspin, Postman, and Zephyr integration",
+  "main": "dist/server/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server/index.js",
+    "dev": "nodemon --exec ts-node src/server/index.ts",
+    "postman:test": "node scripts/run-postman.js",
+    "ios:test": "bash scripts/headspin-test.sh",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write src/**/*.ts",
+    "docker:build": "docker build -t mcp-playwright-server .",
+    "docker:run": "docker run -p 3000:3000 mcp-playwright-server",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "postinstall": "npx playwright install"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.1",
+    "@modelcontextprotocol/server-stdio": "^1.15.1",
+    "@playwright/test": "^1.54.1",
+    "axios": "^1.10.0",
+    "dotenv": "^17.2.0",
+    "joi": "^17.13.3",
+    "newman": "^6.2.1",
+    "playwright": "^1.54.1",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.14",
+    "eslint": "^9.31.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
