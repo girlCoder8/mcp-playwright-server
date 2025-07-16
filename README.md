@@ -6,22 +6,34 @@ Automation framework using Playwright and Model Context Protocol for test execut
 
 ```
 mcp-playwright-server/
-├── examples/           # Example test scenarios and scripts
-├── logs/               # Test execution logs
-├── postman/            # Postman collections and environment files
-├── screenshots/        # Screenshots from test runs
-├── scripts/            # Utility scripts for automation
-│   ├── headspin-test.sh
-│   └── run-postman.js
-├── src/                # Source code
-│   ├── config/         # Configuration files (Appium, Headspin, etc.)
-│   ├── integrations/   # Integrations (Postman, Zephyr, etc.)
-│   ├── middleware/     # Middleware components
-│   ├── playwright/     # Playwright-specific logic
-│   ├── server/         # Server logic
-│   └── utils/          # Utility functions
-├── package.json        # Project dependencies and scripts
-└── README.md           # Project documentation
+├── README.md
+├── .gitignore
+├── .env
+├── package.json
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── examples/
+├── logs/
+├── postman/
+│   ├── sample.postman.json
+│   └── sample-env.postman.json
+├── screenshots/
+├── scripts/
+│   ├── run-postman.js
+│   └── headspin-test.sh
+├── src/
+│   ├── config/
+│   │   ├── appium-config.ts
+│   │   └── headspin-config.ts
+│   ├── integrations/
+│   │   ├── postman.ts
+│   │   └── zephyr.ts
+│   ├── middleware/
+│   ├── playwright/
+│   ├── server/
+│   └── utils/
+
 ```
 
 ## What the Automation Framework Entails
